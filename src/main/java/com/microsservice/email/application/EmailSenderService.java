@@ -1,7 +1,7 @@
 package com.microsservice.email.application;
 
 import com.microsservice.email.adapters.EmailSenderGateway;
-import com.microsservice.email.core.EmailSenderUseCase;
+import com.microsservice.email.core.cases.EmailSenderUseCase;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

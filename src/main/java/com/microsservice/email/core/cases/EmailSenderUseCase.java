@@ -1,4 +1,4 @@
-package com.microsservice.email.core;
+package com.microsservice.email.core.cases;
 
 public interface EmailSenderUseCase {
     void sendEmail(String to, String subject, String body);
