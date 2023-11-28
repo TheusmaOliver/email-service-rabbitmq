@@ -1,5 +1,6 @@
-package com.microsservice.email.infra.rabbitmq;
+package com.microsservice.email.infra.service;
 
+import com.microsservice.email.adapters.EmailSenderGateway;
 import com.microsservice.email.core.exceptions.EmailServiceException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.mail.MailException;
@@ -10,7 +11,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 
 @Service
-public class RabbitMQEmailSender {
+public class RabbitMQEmailSender implements EmailSenderGateway {
 
     @Autowired
     private JavaMailSender emailSender;
@@ -24,7 +25,6 @@ public class RabbitMQEmailSender {
 
         try{
             emailSender.send(message);
-
         } catch (MailException exception){
             throw new EmailServiceException("Failure while sending email", exception);
         }
