@@ -69,6 +69,9 @@ Exemplo de requisição:
 }
 ```
 
+## Deploy
+
+O projeto está configurado para deploy automático no serviço Render. O deploy finalizado pode ser acessado através da seguinte URL: [https://deploy-email-service.onrender.com](https://deploy-email-service.onrender.com)
 
 ## Autor
   
